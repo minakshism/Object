@@ -1,0 +1,67 @@
+{
+	"Continents" : [
+		{
+			"name" : "Asia",
+			"country" : [
+				{
+					"name" : "India",
+					"states" : [
+						{"name" : "West Bengal", "capital": "Kolkata"},
+						{"name" : "Odissa", "capital": "Bhubaneshwar"},
+						{"name" : "Jharkhand", "capital": "Ranchi"}
+					]
+				},
+				{
+					"name" : "Pakistan",
+					"states" : [
+						{"name" : "Punjab", "capital": "Lahore"},
+						{"name" : "Sindh", "capital": "Karachi"},
+						{"name" : "Ishlamabad", "capital": "Ishlamabad"}
+					]
+				},
+				{
+					"name" : "China",
+					"states" : [
+						{"name" : "Anhui", "capital": "Hefei"},
+						{"name" : "Fujian", "capital": "Fuzhou"},
+						{"name" : "Gansu", "capital": "Lanzhou"}
+					]
+				}
+				
+			]
+		},
+		{
+			"name" : "North America",
+				"country" : [
+				{
+					"name" : "USA",
+					"states" : [
+						{"name" : "Alabama", "capital": "Montgomery"},
+						{"name" : "Alaska", "capital": "Juneau"},
+						{"name" : "Arizona", "capital": "Phoenix"}
+					]
+				},
+				{
+					"name" : "Cuba",
+					"states" : [
+						{"name" : "La Habana", "capital": "Havana"},
+						{"name" : "Granma", "capital": "Bayamo"},
+						{"name" : "Artemisa", "capital": "Artemisa"}
+					]
+				},
+				{
+					"name" : "Mexico",
+					"states" : [
+						{"name" : "Aguascalientes", "capital": "Aguascalientes"},
+						{"name" : "Baja California", "capital": "Mexicali"},
+						{"name" : "Baja California Sur", "capital": "La Paz"}
+					]
+				}
+				
+			]
+		},
+		{
+			"name" : "Europe"
+		}
+	]
+}
