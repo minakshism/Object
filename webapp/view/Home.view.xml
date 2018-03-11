@@ -1,74 +1,79 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ca.controller.Home"
-xmlns:f="sap.ui.layout.form" xmlns:u="sap.ui.unified"
-	xmlns:html="http://www.w3.org/1999/xhtml">
+<mvc:View 
+
+controllerName="ca.controller.Home"
+xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">
 
 		<Page title="Title">
 			<content>
-				<VBox class="sapUiSmallMargin">
-				<f:Form id="FormDisplay354" editable="false">
-					<f:title>
-						<core:Title text="Select Form"/>
-					</f:title>
-					<f:layout>
-						<f:ResponsiveGridLayout labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4"
-							emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false"/>
-					</f:layout>
-					<f:formContainers>
-						<f:FormContainer>
-							<f:formElements>
-								<f:FormElement label="Continent">
-									<f:fields>	
-										<Select
-										id="idContinent"
-										forceSelection="false"
-										change="onChange"
-										selectedKey="{/ProductCollection/1/ProductId}"
-										items="{
-											path: '/ProductCollection'
-										}">
-											<core:Item key="{ProductId}" text="{Name}" />
-										</Select>
-									</f:fields>
-								</f:FormElement>
-								<f:FormElement label="Country">
-									<f:fields>
-										<Select
-										id="idCountry"
-										forceSelection="false"
-										change="onChange"
-										selectedKey="{/ProductCollection/1/ProductId}"
-										items="{
-											path: '/ProductCollection'
-										}">
-											<core:Item key="{ProductId}" text="{Name}" />
-										</Select>
-									</f:fields>
-								</f:FormElement>
-								<f:FormElement label="State">
-									<f:fields>
-										<Select
-										id="idState"
-										forceSelection="false"
-										change="onChange"
-										selectedKey="{/ProductCollection/1/ProductId}"
-										items="{
-											path: '/ProductCollection'
-										}">
-											<core:Item key="{ProductId}" text="{Name}" />
-										</Select>
-									</f:fields>
-								</f:FormElement>
-								<f:FormElement label="Capital">
-									<Input id="idCapital" liveChange="onPressStr"/>
-								</f:FormElement>
-								<f:FormElement label="">
-									<Button text="Submit" press="handlePress"/>
-								</f:FormElement>
-							</f:formElements>
-						</f:FormContainer>
-					</f:formContainers>
-				</f:Form>
-			</VBox>
+			<VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormToolbar"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="4"
+			labelSpanL="3"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="4"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false"
+			ariaLabelledBy="Title1" >
+			<f:toolbar>
+				<Toolbar id="TB1">
+					<Title id="Title1" text="Address" level="H4" titleStyle="H4"/>
+					<ToolbarSpacer />
+					<Button icon="sap-icon://settings"/>
+					<Button icon="sap-icon://drop-down-list" />
+				</Toolbar>
+			</f:toolbar>
+			<f:content>
+				<Toolbar ariaLabelledBy="Title2">
+					<Title id="Title2" text="Office" level="H5" titleStyle="H5"/>
+					<ToolbarSpacer />
+					<Button icon="sap-icon://settings"/>
+				</Toolbar>
+				<Label text="Continents"/>
+				<Select
+				id="idContinent"
+				change="onChange"
+				selectedKey="{/Continents/0/id}"
+				items="{
+					path: '/Continents'
+				}">
+					<core:Item key="{id}" text="{name}" />
+				</Select>
+				<Label text="Country" />
+				<Select id="idCountry" selectedKey="{Country}">
+					<items>
+						<core:Item text="England" key="England"/>
+						<core:Item text="Germany" key="Germany"/>
+						<core:Item text="USA" key="USA"/>
+					</items>
+				</Select>
+				
+				<Label text="State" />
+				<Select id="idState" selectedKey="{Country}">
+					<items>
+						<core:Item text="England" key="England"/>
+						<core:Item text="Germany" key="Germany"/>
+						<core:Item text="USA" key="USA"/>
+					</items>
+				</Select>
+				
+				<Label text="Capital"/>
+			    <Input value=""/>
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
 			</content>
 		</Page>
 

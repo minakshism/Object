@@ -1,7 +1,12 @@
 {
 	"Continents" : [
 		{
+			"name" : "All",	
+			"id" : 0
+		},
+		{
 			"name" : "Asia",
+			"id" : 1,
 			"country" : [
 				{
 					"name" : "India",
@@ -32,6 +37,7 @@
 		},
 		{
 			"name" : "North America",
+			"id" :2,
 				"country" : [
 				{
 					"name" : "USA",
@@ -61,7 +67,8 @@
 			]
 		},
 		{
-			"name" : "Europe"
+			"name" : "Europe",
+			"id" : 3
 		}
 	]
 }
